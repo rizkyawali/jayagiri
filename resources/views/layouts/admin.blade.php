@@ -14,7 +14,7 @@
     <!-- Custom fonts for this template-->
     <link rel="shortcut icon" href="{{ url('assets/frontend/assets/img/icon/logo-nav.png') }}" type="image/x-icon">
 
-    @include('includes.style')
+    @include('includes.admin.style')
 
 </head>
 
@@ -24,7 +24,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        @include('includes.sidebar')
+        @include('includes.admin.sidebar')
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -34,7 +34,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                @include('includes.navbar')
+                @include('includes.admin.navbar')
                 <!-- End of Topbar -->
 
 
@@ -46,7 +46,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            @include('includes.footer')
+            @include('includes.admin.footer')
             <!-- End of Footer -->
 
         </div>
@@ -61,10 +61,10 @@
     </a>
 
     <!-- Logout Modal-->
-    @include('includes.logout')
+    @include('includes.admin.logout')
 
     {{--  Script  --}}
-    @include('includes.script')
+    @include('includes.admin.script')
 
 </body>
 
