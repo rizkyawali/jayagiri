@@ -7,12 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Raden Muhammad Rizky Awwali Akbar">
 
     <title>Jayagiri - @yield('title')</title>
 
     <!-- Custom fonts for this template-->
-    <link rel="shortcut icon" href="{{ url('assets/frontend/assets/img/icon/logo-nav.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ url('assets/frontend/images/logo-nav.png') }}" type="image/x-icon">
 
     @include('includes.admin.style')
 
