@@ -45,6 +45,30 @@
                                         <i class="fa fa-trash-alt"></i>
                                     </a>
                                 </td>
+                                <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal"
+                                        aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="deleteModal">Delete {{ $item->title }}</h5>
+                                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">Apakah Anda Yakin Akan Menghapus Data Travel <b>{{ $item->title }}</b></div>
+                                            <div class="modal-footer">
+                                                <form action="{{ route('travel-package.destroy', $item->id) }}" method="POST" class="d-inline">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <button class="btn btn-danger btn-sm">
+                                                        Hapus
+                                                    </button>
+                                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </tr>                           
                         @empty
                             <tr>
@@ -61,28 +85,5 @@
 
 </div>
 
-<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal"
-        aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="deleteModal">Delete {{ $item->title }}</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">Apakah Anda Yakin Akan Menghapus Data Travel <b>{{ $item->title }}</b></div>
-            <div class="modal-footer">
-                <form action="{{ route('travel-package.destroy', $item->id) }}" method="POST" class="d-inline">
-                    @csrf
-                    @method('delete')
-                    <button class="btn btn-danger btn-sm">
-                        Hapus
-                    </button>
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+
 @endsection
